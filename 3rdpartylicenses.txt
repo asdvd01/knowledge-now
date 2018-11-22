@@ -266,16 +266,16 @@ Apache-2.0
 @angular/core
 MIT
 
+@angular/compiler
+MIT
+
 @angular/common
 MIT
 
 @angular/platform-browser
 MIT
 
-@angular/router
-MIT
-
-@angular/animations
+@angular/platform-browser-dynamic
 MIT
 
 zone.js
