@@ -1,11 +1,9 @@
 <ul>
     <li *ngFor="let post of posts$ ">
-      <h1>{{ post.title }}</h1>
-        <span>
-          <p>
-            {{ post.body }}
-          </p>
-        </span>
+      <h1><a href="https://ashutoshdwivedi.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3D{{ post.sys_id }}">{{ post.number }}</a> : {{ post.short_description }}</h1>
+        <div [innerHTML]="post.text">
+          
+        </div>
       
       </li>
 </ul>
