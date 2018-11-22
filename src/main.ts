@@ -11,7 +11,5 @@ if (environment.production) {
     .catch(err => console.error(err));
   };
 }
-$('document').ready(() => {
   platformBrowserDynamic().bootstrapModule(AppModule)
     .catch(err => console.error(err));
-});  
