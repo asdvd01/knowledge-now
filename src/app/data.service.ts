@@ -27,4 +27,22 @@ export class DataService {
    getPosts(){
      return this.http.get('https://ashutoshdwivedi.service-now.com/api/now/table/kb_knowledge',this.httpOptions);
     }
+   search(searchText){
+    
+    var requestBody = {
+      query:{
+          freetext:searchText
+      },
+      meta:{
+          window:{  
+              start:"0.0",
+              end:"100.0"
+          }
+      },
+      //context:"69a05b3853001300a9a2664906dc343f",
+      id:""
+      };
+     return this.http.post('https://ashutoshdwivedi.service-now.com/api/now/cxs/search',JSON.stringify(requestBody),this.httpOptions)
+    
+   }
 }

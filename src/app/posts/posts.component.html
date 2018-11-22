@@ -1,9 +1,18 @@
+
+<mat-form-field >
+    <button mat-button matPrefix mat-icon-button aria-label="Search" (click)="updateList()" >
+        <mat-icon>search</mat-icon>
+    </button>
+    <input matInput type="text" placeholder="Search Articles"   [(ngModel)]="searchText" (keyup)="updateList()" />
+    <button mat-button *ngIf="searchText" matSuffix mat-icon-button aria-label="Clear" (click)="searchText=''">
+      <mat-icon>close</mat-icon>
+    </button>
+    
+  </mat-form-field>
+
 <ul>
     <li *ngFor="let post of posts$ ">
-      <h1><a href="https://ashutoshdwivedi.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsys_kb_id%3D{{ post.sys_id }}">{{ post.number }}</a> : {{ post.short_description }}</h1>
-        <div [innerHTML]="post.text">
-          
-        </div>
-      
+      <h1><a href="https://ashutoshdwivedi.service-now.com/{{ post.link }}">{{ post.meta.number }}</a> : {{ post.title }}</h1>
+      <p  [innerHTML]="post.snippet"></p>
       </li>
 </ul>
