@@ -683,8 +683,8 @@ Office.initialize = function () {
     Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
         .catch(function (err) { return console.error(err); });
 };
-/*platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));*/
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+    .catch(function (err) { return console.error(err); });
 
 
 /***/ }),
